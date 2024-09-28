@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
-// Function to decode JWT token
+
 const decodeToken = (token) => {
   if (!token) return null;
 
-  // Split the token into header, payload, and signature
+
   const base64Url = token.split(".")[1];
   const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
   const jsonPayload = decodeURIComponent(
